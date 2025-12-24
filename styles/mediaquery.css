@@ -123,19 +123,20 @@
     margin: 0px;
     margin-top: 20px;
   }
-  .hero-heading {
+  .hero-heading,
+  .hero-inner-heading {
     width: 100% !important;
-    font-size: 40px;
+    font-size: 35px;
     padding: 5px;
   }
   .hero-para {
-    font-size: 20px;
+    font-size: 17px;
     line-height: 30px;
   }
   .view-btn,
   .contact-btn {
     padding: 12px 24px;
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 20px;
   }
   .span {
@@ -155,43 +156,65 @@
   }
   .about-para {
     width: 100%;
-    font-size: 18px;
+    font-size: 17px;
   }
   .get-in-touch-btn {
     padding: 12px 24px;
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 20px;
   }
-  .about-image {
-    width: unset !important;
+  .about-image-container {
+    width: 100%;
+  }
+  .about-image-container img {
+    width: 100%;
+    margin: 0 auto !important;
   }
   .project-para,
   .ex-para,
   .contact-para {
     width: 100%;
     text-align: center;
-    font-size: 15px;
+    font-size: 17px;
     margin-bottom: 20px;
   }
   .ex-para {
     margin-bottom: 0px;
     margin-top: -10px;
   }
+  .first-project-paucek {
+    width: 100%;
+  }
   .design-pattern {
     flex-direction: column;
+    gap: 30px;
   }
   .contact-address-form {
     flex-direction: column;
+    width: 100%;
+    padding: 0;
   }
   .address,
   form {
     width: 100% !important;
   }
+  form {
+    border: 1px solid #9318fa;
+    box-shadow: none;
+  }
+  .email-container,
+  .phone-container,
+  .location-container {
+    width: 100%;
+  }
+
   .footer {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
+    gap: 0px;
+    width: 100% !important;
   }
   .footer-section-container {
     display: flex;
