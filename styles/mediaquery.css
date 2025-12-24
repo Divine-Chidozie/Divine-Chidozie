@@ -71,6 +71,10 @@
 }
 /* Mobile device and below */
 @media screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
   .hero-container {
     padding: 0;
   }
@@ -100,7 +104,6 @@
     position: absolute; /* for overlay effect*/
     top: 60px;
     left: 0;
-
     width: 100%;
   }
   .mobile-menu li {
@@ -124,6 +127,11 @@
   .contact-btn {
     padding: 8px 24px;
     font-size: 14px;
+  }
+  .span {
+    font-size: 18px;
+    padding: 4px;
+    padding-left: 10px;
   }
   .hero-image {
     width: 220px;

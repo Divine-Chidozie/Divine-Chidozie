@@ -58,6 +58,9 @@ body {
   gap: 10px;
   list-style-type: none;
 }
+.mobile-menu {
+  display: none;
+}
 .nav-header-list li a {
   text-decoration: none;
   color: black;
