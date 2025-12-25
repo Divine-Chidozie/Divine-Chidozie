@@ -1,39 +1,58 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --muted-text: oklch(44.6% 0.03 256.802);
+  --primary-color: oklch(49.6% 0.265 301.924);
+  --card-bg: #ffffff;
+  --btn-bg: oklch(49.6% 0.265 301.924);
+  --gradient-btn: linear-gradient(
+    90deg,
+    rgb(147, 24, 250),
+    rgb(79, 58, 246),
+    rgb(0, 171, 223)
+  );
+}
+
+.dark-background {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --muted-text: #cccccc;
+  --card-bg: #111111;
+  --btn-bg: oklch(49.6% 0.265 301.924);
+}
+
+/* ***** Global Styles ***** */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scrollbar-width: thin;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff;
-  color: black;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.dark-background-color {
-  background-color: black;
-  color: white;
-}
-
-/* body::-webkit-scrollbar {
-  width: 8px;
-} */
-
+/* ***** Sections ***** */
 .about-section,
 .project-section,
 .experience-section,
 .contact-section,
 .design-section {
-  /* background-color: orange; */
   margin: 0 auto;
   width: 90%;
   max-width: 1200px;
   padding: 10px;
 }
+
 /* ***** Header Section ***** */
 .nav-header {
   display: flex;
@@ -47,15 +66,18 @@ body {
   left: 0;
   z-index: 1000;
 }
+
 .nav-header span {
   color: rgba(93, 36, 146, 0.669);
   font-weight: bold;
   font-size: 20px;
 }
+
 .logo {
   text-decoration: none;
   font-size: 25px;
 }
+
 .nav-header-list {
   display: flex;
   justify-content: center;
@@ -63,25 +85,32 @@ body {
   gap: 10px;
   list-style-type: none;
 }
+
 .mobile-menu {
   display: none;
 }
+
 .nav-header-list li a {
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
 }
+
 .download-toggle-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
 }
+
 .toggle-btn {
-  color: oklch(49.6% 0.265 301.924);
+  cursor: pointer;
+  /* background-color: green; */
+  color: var(--primary-color);
 }
+
 .nav-header-btn-container,
 .work-together-btn {
-  background-color: oklch(49.6% 0.265 301.924);
+  background-color: var(--btn-bg);
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -89,54 +118,59 @@ body {
   padding: 10px;
   text-decoration: none;
 }
+
 .nav-header-btn-container span {
   color: white;
   font-weight: normal;
   font-size: 16px;
 }
 
-/* ***** Hero section ***** */
+/* ***** Hero Section ***** */
 main {
   margin-top: 84px;
 }
+
 .hero-container {
-  /* height: 450px; */
   background: radial-gradient(circle, rgb(248, 248, 255), rgb(222, 205, 247));
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .hero-inner-container {
   margin-left: 35px;
-
   padding: 20px;
 }
+
 .span {
-  background-color: oklch(49.6% 0.265 301.924);
+  background-color: var(--primary-color);
   color: white;
   display: block;
   text-align: justify;
   max-width: 250px;
-  padding: 2px;
-  padding-left: 10px;
+  padding: 2px 10px;
   margin: 10px 0;
   border-radius: 6px;
 }
+
 .hero-heading {
   font-size: 50px;
   letter-spacing: -2px;
   line-height: 55px;
 }
+
 .hero-inner-heading {
-  color: oklch(49.6% 0.265 301.924);
+  color: var(--primary-color);
 }
+
 .hero-para {
   max-width: 900px;
   font-size: 17px;
   margin-top: 15px;
   text-align: justify;
 }
+
 .hero-btn-container {
   margin-top: 10px;
   display: flex;
@@ -144,24 +178,22 @@ main {
   align-items: center;
   gap: 15px;
 }
+
 .hero-btn-container a {
   text-decoration: none;
 }
+
 .view-btn {
   padding: 10px 18px;
-  background: linear-gradient(
-    90deg,
-    rgb(147, 24, 250),
-    rgb(79, 58, 246),
-    rgb(0, 171, 223)
-  );
+  background: var(--gradient-btn);
   color: #ffffff;
   border-radius: 4px;
 }
+
 .contact-btn {
   padding: 10px 18px;
   border: 1px solid rgb(147, 24, 250);
-  background: rgb(255, 255, 255);
+  background: #ffffff;
   color: #000000;
   border-radius: 4px;
 }
@@ -169,33 +201,36 @@ main {
 .hero-image-container {
   padding: 20px;
 }
+
 .hero-image {
   width: 350px;
   height: 350px;
   margin: 0px 50px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
+/* ***** About Section ***** */
 .about-me-heading {
-  color: #9318fa;
+  color: var(--primary-color);
   font-size: 25px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 .about-content-image-link {
-  /* background-color: crimson; */
-  /* padding: 20px; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   gap: 10px;
 }
+
 .about-link-para {
-  /* background-color: blue; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+
 .about-link {
   display: flex;
   gap: 20px;
@@ -203,12 +238,13 @@ main {
   margin: 15px 0;
   font-size: 18px;
 }
+
 .myself {
   text-decoration: underline;
   text-underline-offset: 18px;
   margin-bottom: 25px;
   text-decoration-thickness: 2px;
-  color: oklch(49.6% 0.265 301.924);
+  color: var(--primary-color);
 }
 
 .about-para {
@@ -217,26 +253,20 @@ main {
   text-align: justify;
   width: 90%;
   margin-bottom: 20px;
-  color: #000000;
+  color: var(--text-color);
   font-weight: 600;
 }
+
 .get-in-touch-btn {
   color: #ffffff;
   text-decoration: none;
   border-radius: 4px;
   font-weight: 600;
-  background-color: #9318fa;
+  background-color: var(--primary-color);
   padding: 10px 24px;
   transition: 0.3s ease-in;
 }
-/* Uncomment this like to apply hover effect style */
 
-/* .get-in-touch-btn:hover {
-  background-color: green;
-  color: red;
-  border-radius: 0px;
-  font-weight: normal;
-} */
 .about-image-container img {
   width: 380px;
   height: 380px;
@@ -247,12 +277,12 @@ main {
 
 /* ***** Projects Section ***** */
 .project-section {
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .project-container {
   padding: 10px;
   display: flex;
@@ -260,31 +290,34 @@ main {
   align-items: center;
   gap: 20px;
 }
+
 .first-project-paucek {
-  border: 1px solid #9318fa;
+  border: 1px solid var(--primary-color);
   border-radius: 10px;
   padding-bottom: 10px;
 }
+
 .first-project-paucek img {
   width: 100%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
+
 .project-heading-paucek {
   margin: 10px 0;
-  font-size: 20px;
+  font-size: 22px;
   padding-left: 15px;
   margin-bottom: 20px;
-  font-size: 22px;
-  color: black;
+  color: var(--text-color);
 }
+
 .first-project-para {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 0 15px;
   margin-top: -10px;
   text-align: justify;
-  color: oklch(44.6% 0.03 256.802);
+  color: var(--muted-text);
 }
+
 .project-list-item {
   list-style-type: none;
   padding-left: 15px;
@@ -292,16 +325,18 @@ main {
   margin: 10px 0px 5px 0;
   gap: 10px;
 }
+
 .project-list-item li {
-  color: #9318fa;
+  color: var(--primary-color);
   background-color: oklch(94.6% 0.033 307.174);
   padding: 2px 8px;
   font-size: 15px;
   border-radius: 4px;
 }
+
 .project-link {
   text-decoration: none;
-  background-color: oklch(49.6% 0.265 301.924);
+  background-color: var(--primary-color);
   color: #ffffff;
   margin: 10px 0;
   margin-left: 15px;
@@ -311,21 +346,19 @@ main {
   padding: 10px 24px;
   border-radius: 4px;
   font-size: 17px;
-
   display: block;
 }
+
 /* ***** Experience Section ***** */
 .experience-section,
 .contact-section {
-  /* background-color: red; */
-  /* color: orange; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-/* Project-heading-para and experience-heading-para uses same style */
+/* Heading paragraphs for project/experience/contact */
 .experience-heading-para,
 .project-heading-para,
 .contact-heading-para {
@@ -336,46 +369,46 @@ main {
   margin-top: 65px;
 }
 
-/* binding ex-heading and project-heading because both uses the same code */
 .ex-heading,
 .project-heading,
 .contact-heading {
-  color: #9318fa;
+  color: var(--primary-color);
   font-size: 25px;
   margin-bottom: 20px;
 }
 
-/* binding ex-para and project-para because both uses the same code */
 .ex-para,
 .project-para,
 .contact-para {
   width: 80%;
   text-align: center;
   max-width: 900px;
-  color: oklch(44.6% 0.03 256.802);
+  color: var(--muted-text);
   font-size: 18px;
 }
 
-/* ***** Design & Development Style ***** */
+/* ***** Design Section ***** */
 .design-section {
   margin-top: 50px;
   background: radial-gradient(circle, rgb(248, 248, 255), rgb(222, 205, 247));
 }
+
 .design-heading {
-  color: oklch(49.6% 0.265 301.924);
+  color: var(--primary-color);
   font-size: 25px;
   text-align: center;
   margin-bottom: 35px;
   margin-top: 20px;
 }
+
 .design-pattern {
-  /* background: orange; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
   padding: 15px;
 }
+
 .design-pattern-11 {
   display: flex;
   flex-direction: column;
@@ -383,11 +416,12 @@ main {
   align-items: center;
   gap: 5px;
 }
+
 .design-number {
-  background-color: oklch(49.6% 0.265 301.924);
+  background-color: var(--primary-color);
   width: 50px;
   height: 50px;
-  border-radius: 25px;
+  border-radius: 50%;
   margin: 10px auto;
   display: flex;
   align-items: center;
@@ -395,26 +429,28 @@ main {
   color: white;
   font-weight: bold;
 }
+
 .design-pattern-heading {
   font-size: 17px;
   margin: 5px 0;
 }
+
 .design-para {
   text-align: center;
 }
 
-/* ***** ***** Contact Section ***** ***** */
+/* ***** Contact Section ***** */
 .contact-heading-para {
   margin-bottom: 30px;
 }
+
 .work-together-btn {
   color: #ffffff;
   margin: 15px 0;
   padding: 12px 18px;
 }
-/* General settings for the contact-address and the contact-form */
+
 .contact-address-form {
-  /* background-color: red; */
   padding: 10px;
   display: flex;
   justify-content: space-evenly;
@@ -423,9 +459,7 @@ main {
   width: 100%;
 }
 
-/* Contact address setting: aside */
 aside {
-  /* background-color: blue; */
   height: 350px;
   display: flex;
   justify-content: center;
@@ -445,10 +479,7 @@ aside {
   border-radius: 4px;
 }
 
-/* Contact Form setting: form */
 form {
-  /* background-color: pink; */
-
   height: 350px;
   display: flex;
   justify-content: center;
@@ -457,11 +488,11 @@ form {
   width: 50%;
   padding: 12px;
   border-radius: 8px;
-  box-shadow: 0px 0px 4px oklch(44.6% 0.03 256.802);
+  box-shadow: 0px 0px 4px var(--muted-text);
 }
+
 input,
 textarea {
-  /* background-color: green; */
   padding: 12px;
   font-size: 15px;
   outline: none;
@@ -470,11 +501,13 @@ textarea {
   border-radius: 4px;
   border: 1px solid rgba(86, 85, 85, 0.763);
 }
+
 textarea {
   resize: vertical;
 }
+
 .submit-btn {
-  background-color: oklch(49.6% 0.265 301.924);
+  background-color: var(--primary-color);
   border-radius: 4px;
   padding: 20px;
   width: 100%;
@@ -489,6 +522,7 @@ textarea {
 .footer-section {
   padding: 20px;
 }
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -496,6 +530,7 @@ textarea {
   align-items: center;
   gap: 10px;
 }
+
 .footer-section-container {
   width: 33.3%;
   padding: 20px;
@@ -504,48 +539,45 @@ textarea {
   justify-content: center;
   align-items: start;
 }
+
 .footer-heading,
 .links-heading,
 .connect-heading {
-  color: #9318fa;
+  color: var(--primary-color);
   font-size: 22px;
   margin-bottom: 10px;
 }
+
 .footer-heading {
   margin-top: -28px;
 }
+
 .connect-heading {
   margin-top: -75px;
 }
+
+.footer-para,
+.connect-para,
+.footer-list-items li a,
+.connect-para a {
+  font-size: 17px;
+  color: var(--muted-text);
+  text-decoration: none;
+}
+
 .footer-para {
   text-align: justify;
   line-height: 23px;
-  font-size: 17px;
-  color: oklch(44.6% 0.03 256.802);
 }
+
 .footer-list-items {
   list-style: none;
 }
 
-.footer-list-items li a {
-  text-decoration: none;
-  color: oklch(44.6% 0.03 256.802);
-  line-height: 25px;
-  font-size: 17px;
-}
-.connect-para {
-  font-size: 17px;
-  color: oklch(44.6% 0.03 256.802);
-}
-.connect-para a {
-  color: oklch(44.6% 0.03 256.802);
-  font-size: 17px;
-  text-decoration: none;
-}
 .copyright {
   margin-top: 20px;
   text-align: center;
   font-size: 17px;
   margin-bottom: 25px;
-  color: oklch(44.6% 0.03 256.802);
+  color: var(--muted-text);
 }
