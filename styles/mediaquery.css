@@ -250,4 +250,18 @@
   .copyright {
     font-size: 14px;
   }
+
+  /* Toggle button and Hamburger Menu */
+  .download-toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Toggle button  */
+  .toggle-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
