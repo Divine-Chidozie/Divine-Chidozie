@@ -19,6 +19,7 @@ function navHeaderScroll() {
     navHeader.style.transition = backgroundTransition;
     navLogo.style.color = generalColor;
     toggleButton.style.fill = generalColor;
+
     navListItems.forEach((item) => {
       item.style.color = "white";
     });
@@ -28,7 +29,8 @@ function navHeaderScroll() {
   } else {
     navHeader.style.backgroundColor = "";
     navLogo.style.color = "#0000EE";
-    toggleButton.style.fill = "black";
+    // toggleButton.style.fill = "green";
+    toggleButton.style.fill = "#8200db";
     navListItems.forEach((item) => {
       item.style.color = "";
     });
@@ -104,33 +106,51 @@ const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const messageInput = document.getElementById("message");
 
+const nameErrorEl = document.getElementById("name-error");
+const emailErrorEl = document.getElementById("email-error");
+const messageErrorEl = document.getElementById("textarea-error");
+
 const validateForm = ({ name, email, message }) => {
-  const error = [];
+  const nameErrors = [];
+  const emailErrors = [];
+  const messageErrors = [];
+
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (!name.trim()) {
-    error.push("Please enter your name");
+    nameErrors.push("Please enter your name");
   }
 
   if (!email.trim()) {
-    error.push("Please enter your email address");
+    emailErrors.push("Please enter your email");
   } else if (!emailPattern.test(email)) {
-    error.push("Please enter a valid email address");
+    emailErrors.push("Please enter a valid email address");
   }
 
   if (!message.trim()) {
-    error.push("Please enter your message");
+    messageErrors.push("Please enter your message");
   } else if (message.trim().length < 10) {
-    error.push("Your message must be atleast 10 characters long");
+    messageErrors.push("Message must be more than 10 characters long");
   }
+
   return {
-    isValid: error.length === 0,
-    error,
+    isValid:
+      nameErrors.length === 0 &&
+      emailErrors.length === 0 &&
+      messageErrors.length === 0,
+    nameErrors,
+    emailErrors,
+    messageErrors,
   };
 };
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+
+  // Clear old errors
+  nameErrorEl.textContent = "";
+  emailErrorEl.textContent = "";
+  messageErrorEl.textContent = "";
 
   const result = validateForm({
     name: nameInput.value,
@@ -139,9 +159,25 @@ form.addEventListener("submit", (event) => {
   });
 
   if (!result.isValid) {
-    result.error.forEach((error) => console.warn(error));
+    nameErrorEl.textContent = result.nameErrors.join(", ");
+    emailErrorEl.textContent = result.emailErrors.join(",");
+    messageErrorEl.textContent = result.messageErrors.join(", ");
     return;
   }
 
   console.log("From submitted successfully");
 });
+
+// Clear inputs on typing....
+function clearNameInput() {
+  nameErrorEl.textContent = "";
+}
+function clearEmailInput() {
+  emailErrorEl.textContent = "";
+}
+function clearMessageInput() {
+  messageErrorEl.textContent = "";
+}
+nameInput.addEventListener("input", clearNameInput);
+emailInput.addEventListener("input", clearEmailInput);
+messageInput.addEventListener("input", clearMessageInput);

@@ -576,8 +576,18 @@ textarea {
 
 textarea {
   resize: vertical;
+  /* background-color: red; */
+  padding-bottom: 30px;
 }
 
+.error {
+  color: rgba(219, 12, 12, 0.909);
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0 5px;
+  margin-bottom: 15px;
+  margin-top: -2px;
+}
 .submit-btn {
   /* background-color: var(--primary-color); */
   background-color: var(--btn-bg);

@@ -62,12 +62,12 @@
           <nav>
             <ul class="mobile-menu" id="mobileMenu">
               <li><a href="#home">Home</a></li>
-              <li><a class="nav-list-items" href="#projects">Projects</a></li>
+              <li><a href="#projects">Projects</a></li>
               <li>
-                <a class="nav-list-items" href="#experience">Experience</a>
+                <a href="#experience">Experience</a>
               </li>
-              <li><a class="nav-list-items" href="#education">Education</a></li>
-              <li><a class="nav-list-items" href="#contact">Contact</a></li>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#contact">Contact</a></li>
               <a
                 href="resume.pdf"
                 class="nav-header-btn-container new-download"
@@ -458,19 +458,21 @@
                 name="name"
                 placeholder="Your Name"
               />
+              <p id="name-error" class="error name-error"></p>
               <input
                 type="email"
                 id="email"
                 name="email"
                 placeholder="Your Email"
               />
+              <p id="email-error" class="error email-error"></p>
               <textarea
                 id="message"
                 rows="3"
                 name="message"
                 placeholder="Your Message"
               ></textarea>
-
+              <p id="textarea-error" class="error textarea-error"></p>
               <button type="submit" class="submit-btn" id="submit-btn">
                 Send Message
               </button>
