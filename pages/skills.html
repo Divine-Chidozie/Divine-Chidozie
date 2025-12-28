@@ -4,18 +4,114 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
+
     <title>skills</title>
   </head>
   <body>
     <div class="container">
-      <header class="skill-header">
+      <header>
+        <div class="nav-header" id="nav-header">
+          <span><a href="skills.html" class="logo">Divine Chidozie</a></span>
+          <nav>
+            <ul class="nav-header-list">
+              <li><a class="nav-list-items" href="/index.html">Home</a></li>
+              <li><a class="nav-list-items" href="/index.html">Projects</a></li>
+              <li>
+                <a class="nav-list-items" href="/index.html">Experience</a>
+              </li>
+              <li>
+                <a class="nav-list-items" href="/index.html">Education</a>
+              </li>
+              <li><a class="nav-list-items" href="/index.html">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="download-toggle-container">
+            <a href="resume.pdf" class="nav-header-btn-container" download>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"
+                />
+              </svg>
+              <span id="download-btn" class="resume-btn">Download Resume</span>
+            </a>
+
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                id="toggle-btn"
+                class="toggle-btn"
+              >
+                <path
+                  d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"
+                />
+              </svg>
+            </div>
+
+            <div class="hamburger-menu" id="menu">
+              <span class="menu-span"></span>
+              <span class="menu-span"></span>
+              <span class="menu-span"></span>
+            </div>
+
+            <nav>
+              <ul class="mobile-menu" id="mobileMenu">
+                <li><a href="/index.html">Home</a></li>
+                <li>
+                  <a class="nav-list-items" href="/index.html">Projects</a>
+                </li>
+                <li>
+                  <a class="nav-list-items" href="/index.html">Experience</a>
+                </li>
+                <li>
+                  <a class="nav-list-items" href="/index.html">Education</a>
+                </li>
+                <li>
+                  <a class="nav-list-items" href="/index.html">Contact</a>
+                </li>
+                <a
+                  href="resume.pdf"
+                  class="nav-header-btn-container new-download"
+                  download
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#e3e3e3"
+                  >
+                    <path
+                      d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"
+                    />
+                  </svg>
+                  <span id="download-btn" class="resume-btn"
+                    >Download Resume</span
+                  >
+                </a>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <section class="skill-header">
         <h1 class="skill-heading">My Skills</h1>
         <p class="skill-para">
           A comprehensive overview of my technical skills, organized by
           category. I'm constantly learning and expanding my skillset to stay
           current with modern web development practices
         </p>
-      </header>
+      </section>
 
       <section class="skill-section">
         <div class="fontend-core">
@@ -77,5 +173,7 @@
         </span>
       </p>
     </div>
+
+    <script src="/script.js"></script>
   </body>
 </html>

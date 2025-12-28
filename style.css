@@ -260,8 +260,13 @@ main {
   font-size: 18px;
   cursor: pointer;
 }
+.skills a {
+  text-decoration: none;
+  color: #000000;
+}
+.myself:hover,
 .education:hover,
-.skills:hover {
+.skills a:hover {
   color: oklch(49.939% 0.2637 302.037 / 0.619);
   transition: 0.3s ease-in;
 }
@@ -678,6 +683,7 @@ textarea {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  margin-top: 140px;
 }
 
 /* Header */

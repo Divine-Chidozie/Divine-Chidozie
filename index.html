@@ -54,9 +54,9 @@
           </div>
 
           <div class="hamburger-menu" id="menu">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span class="menu-span"></span>
+            <span class="menu-span"></span>
+            <span class="menu-span"></span>
           </div>
 
           <nav>
@@ -129,7 +129,7 @@
       </section>
 
       <!-- ===== About Section ===== -->
-      <section id="about">
+      <section id="education">
         <div class="about-section">
           <h2 class="about-me-heading">About Me</h2>
           <div class="about-content-image-link">
@@ -137,7 +137,9 @@
               <ul class="about-link">
                 <li class="myself" id="myself-link">MYSELF</li>
                 <li class="education" id="education-link">EDUCATION</li>
-                <li class="skills" id="skills-link">SKILLS</li>
+                <li class="skills" id="skills-link">
+                  <a href="pages/skills.html">SKILLS</a>
+                </li>
               </ul>
 
               <p class="about-para" id="about-para">
@@ -398,10 +400,14 @@
                     d="M440-520 120-720v400h400v80H120q-33 0-56.5-23.5T40-320v-480q0-33 23.5-56.5T120-880h640q33 0 56.5 23.5T840-800v200h-80v-120L440-520Zm0-80 320-200H120l320 200ZM760-80q-66 0-113-47t-47-113v-180q0-42 29-71t71-29q42 0 71 29t29 71v180h-80v-180q0-8-6-14t-14-6q-8 0-14 6t-6 14v180q0 33 23.5 56.5T760-160q33 0 56.5-23.5T840-240v-160h80v160q0 66-47 113T760-80ZM120-720v-80 480-400Z"
                   />
                 </svg>
-                <h4>Email</h4>
+                <h4>Email:</h4>
                 <p>
-                  <a class="email-link" href="mailto:igwedivine92@gmail.com"
-                    >igwedivine92@gmail.com</a
+                  <a
+                    id="email-link"
+                    class="email-link"
+                    href="mailto:igwedivine92@gmail.com"
+                  >
+                    igwedivine92@gmail.com</a
                   >
                 </p>
               </address>
@@ -419,7 +425,7 @@
                   />
                 </svg>
                 <!-- Add phone icon image later: don't forget -->
-                <h4>Phone</h4>
+                <h4>Phone:</h4>
                 <p>+234 814 244 3836</p>
               </address>
 
@@ -436,7 +442,7 @@
                     d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"
                   />
                 </svg>
-                <h4>Location</h4>
+                <h4>Location:</h4>
                 <p>Lagos State, Nigeria</p>
               </address>
 
@@ -445,23 +451,23 @@
               </div>
             </aside>
 
-            <form id="form" action="/form/api/contact" method="post">
+            <form id="form">
               <input
                 type="text"
-                name="name"
                 id="name"
+                name="name"
                 placeholder="Your Name"
               />
               <input
                 type="email"
-                name="email"
                 id="email"
+                name="email"
                 placeholder="Your Email"
               />
               <textarea
                 id="message"
-                name="message"
                 rows="3"
+                name="message"
                 placeholder="Your Message"
               ></textarea>
 
@@ -488,10 +494,10 @@
           <div class="footer-section-container">
             <h4 class="links-heading">Quick Links</h4>
             <ul class="footer-list-items">
-              <li><a href="#">About Me</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Skills</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#education">About Me</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="/pages/skills.html">Skills</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
 
@@ -504,10 +510,13 @@
 
             <div class="footer-link-icons">
               <!-- add social media icons: also to represent your social handles -->
-              <a href="">
+              <a href="https://github.com/Divine-Chidozie" target="_blank">
                 <img src="images/logo-github.svg" alt="Logo of Github" />
               </a>
-              <a href="">
+              <a
+                href="https://www.linkedin.com/in/divine-chidozie-48abb7363/"
+                target="_blank"
+              >
                 <img src="images/logo-linkedin.svg" alt="Logo of Linkedin" />
               </a>
             </div>
