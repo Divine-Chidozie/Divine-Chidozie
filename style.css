@@ -359,8 +359,8 @@ main {
   color: var(--text-color);
   min-height: 48px;
 
-  margin-top: 10px;
-  margin-bottom: -10px;
+  margin-top: 15px;
+  margin-bottom: -15px;
 }
 .first-project-para {
   padding: 0 15px;
