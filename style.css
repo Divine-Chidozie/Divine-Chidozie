@@ -358,6 +358,9 @@ main {
   /* margin-bottom: 20px; */
   color: var(--text-color);
   min-height: 48px;
+
+  margin-top: 10px;
+  margin-bottom: -10px;
 }
 .first-project-para {
   padding: 0 15px;
