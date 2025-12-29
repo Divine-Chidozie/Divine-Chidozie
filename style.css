@@ -325,7 +325,6 @@ main {
   justify-content: center;
   align-items: center;
 }
-
 .project-container {
   padding: 10px;
   display: flex;
@@ -333,19 +332,16 @@ main {
   align-items: center;
   gap: 20px;
 }
-
 .first-project-paucek {
   border: 1px solid var(--primary-color);
   border-radius: 10px;
   padding-bottom: 10px;
 }
-
 .first-project-paucek img {
   width: 100%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
-
 .project-heading-paucek {
   margin: 10px 0;
   font-size: 22px;
@@ -353,7 +349,6 @@ main {
   margin-bottom: 20px;
   color: var(--text-color);
 }
-
 .first-project-para {
   padding: 0 15px;
   margin-top: -10px;
@@ -405,7 +400,62 @@ main {
   justify-content: center;
   align-items: center;
 }
+.experience-item {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-left: 20px;
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 6px rgb(181, 178, 178);
+}
+.experience-heading-span {
+  display: flex;
+  margin: 15px 0;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.experience-date {
+  color: oklch(0.551 0.027 264.364);
+  margin-right: 15px;
+}
+.experience-item-para {
+  color: red;
+  max-width: 1200px;
+  color: oklch(0.551 0.027 264.364);
+  font-weight: 600;
+  font-size: 16px;
+}
+.experience-skills-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  list-style-type: none;
+}
+.experience-skills-list li {
+  background-color: oklch(0.946 0.033 307.174);
+  color: oklch(0.496 0.265 301.924);
+  text-align: center;
+  padding: 4px 8px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+.experience-links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 10px;
+}
+.experience-links a {
+  text-decoration: none;
+  background-color: oklch(0.496 0.265 301.924);
+  color: rgb(255, 255, 255);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
 /* Heading paragraphs for project/experience/contact */
 .experience-heading-para,
 .project-heading-para,
@@ -433,6 +483,9 @@ main {
   max-width: 900px;
   color: var(--muted-text);
   font-size: 18px;
+}
+.project-para {
+  margin-bottom: 10px;
 }
 
 /* ***** Design Section ***** */
