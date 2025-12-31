@@ -353,9 +353,8 @@ main {
   border-top-right-radius: 8px;
 }
 .project-heading-paucek {
-  /* margin: 10px 0; */
   padding-left: 15px;
-  /* margin-bottom: 20px; */
+
   color: var(--text-color);
   min-height: 48px;
 
@@ -609,12 +608,15 @@ aside {
   font-style: normal;
   font-weight: normal;
 }
+
 .email-link {
   color: black;
   text-decoration: none;
   font-style: normal;
 }
-
+.contact-phone-no {
+  font-style: normal;
+}
 form {
   height: 350px;
   display: flex;

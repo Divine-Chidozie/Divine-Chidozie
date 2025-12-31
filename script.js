@@ -1,5 +1,3 @@
-// const { response } = require("express");
-
 const downloadButton = document.getElementById("download-btn");
 const navHeader = document.getElementById("nav-header");
 const navLogo = document.querySelector(".logo");
@@ -8,6 +6,7 @@ const menu = document.getElementById("menu");
 const menuSpan = document.querySelectorAll(".menu-span");
 const mobileMenu = document.getElementById("mobileMenu");
 const toggleButton = document.querySelector("#toggle-btn");
+const workTogetherButton = document.getElementById("work-together-btn");
 
 const navHeaderBackground = `#9318fa`;
 const backgroundTransition = "0.3s ease-in";
@@ -98,9 +97,6 @@ function allLinks() {
 }
 allLinks();
 
-const year = document.getElementById("year");
-year.textContent = new Date().getFullYear();
-
 const form = document.getElementById("form");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
@@ -181,3 +177,11 @@ function clearMessageInput() {
 nameInput.addEventListener("input", clearNameInput);
 emailInput.addEventListener("input", clearEmailInput);
 messageInput.addEventListener("input", clearMessageInput);
+
+workTogetherButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  form.scrollIntoView({ behavior: "smooth" });
+});
+
+const year = document.getElementById("year");
+year.textContent = new Date().getFullYear();
