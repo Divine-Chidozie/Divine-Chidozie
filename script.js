@@ -8,6 +8,9 @@ const mobileMenu = document.getElementById("mobileMenu");
 const toggleButton = document.querySelector("#toggle-btn");
 const workTogetherButton = document.getElementById("work-together-btn");
 
+// ===== Skill Heading for skill page =====
+const skillHeading = document.getElementById("skill-heading");
+
 const navHeaderBackground = `#9318fa`;
 const backgroundTransition = "0.3s ease-in";
 const generalColor = "white";
@@ -55,6 +58,7 @@ downloadButton.addEventListener("click", function (event) {
 // Apply saved theme on page load
 if (localStorage.getItem("darkMode") === "enabled") {
   document.body.classList.toggle("dark-background");
+  skillHeading.style.color = "white";
 }
 // Toggle dark mode on button click
 toggleButton.addEventListener("click", () => {
@@ -178,10 +182,10 @@ nameInput.addEventListener("input", clearNameInput);
 emailInput.addEventListener("input", clearEmailInput);
 messageInput.addEventListener("input", clearMessageInput);
 
-workTogetherButton.addEventListener("click", (event) => {
-  event.preventDefault();
+workTogetherButton.onclick = function (e) {
+  e.preventDefault();
   form.scrollIntoView({ behavior: "smooth" });
-});
+};
 
 const year = document.getElementById("year");
 year.textContent = new Date().getFullYear();

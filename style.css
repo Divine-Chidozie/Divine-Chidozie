@@ -381,8 +381,9 @@ main {
   color: var(--primary-color);
   background-color: oklch(94.6% 0.033 307.174);
   padding: 2px 8px;
-  font-size: 15px;
+  font-size: 14px;
   border-radius: 4px;
+  font-weight: 600;
 }
 .project-btn {
   display: flex;
@@ -746,12 +747,12 @@ textarea {
 
 /* ***** Skill Page Style ***** */
 :root {
-  --primary-color: #4f46e5;
+  --primary-color: oklch(49.6% 0.265 301.924);
   --heading-color: #111827;
   --text-muted: #6b7280;
   --card-bg: #ffffff;
   --border-color: #e5e7eb;
-  --tag-bg: #eef2ff;
+  --backgrounf-bg: oklch(94.6% 0.033 307.174);
 }
 
 /* Container */
@@ -771,7 +772,7 @@ textarea {
 }
 
 .skill-heading {
-  color: var(--heading-color);
+  /* color: var(--heading-color); */
   font-size: 24px;
 }
 
@@ -790,7 +791,7 @@ textarea {
 }
 
 /* Skill Cards */
-.frontend-core,
+.fontend-core,
 .library,
 .styling-system,
 .version-control,
@@ -855,7 +856,9 @@ textarea {
 .version-control-list li,
 .currently-learing-list li {
   font-size: 13px;
-  background-color: var(--tag-bg);
+  /* background-color: var(--tag-bg); */
+  /* background-color: red; */
+  background-color: oklch(94.6% 0.033 307.174);
   color: var(--primary-color);
   padding: 4px 8px;
   border-radius: 6px;
