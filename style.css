@@ -43,7 +43,9 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .hero-heading {
@@ -95,6 +97,10 @@ body {
   font-size: 25px;
 }
 
+/* Skill Logo Style for Skill Page */
+.skill-logo {
+  color: var(--primary-color);
+}
 .nav-header-list {
   display: flex;
   justify-content: center;
@@ -132,6 +138,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  place-items: unset;
   padding: 10px;
   text-decoration: none;
 }
@@ -402,6 +409,11 @@ main {
   padding: 5px 10px;
   border-radius: 4px;
   font-size: 15px;
+}
+.project-link:hover,
+.view-github:hover {
+  transform: translate(-5px);
+  transition: 0.3s ease;
 }
 
 /* ***** Experience Section ***** */
@@ -803,7 +815,9 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .frontend-core:hover,

@@ -48,10 +48,14 @@ menu.addEventListener("click", function () {
   mobileMenu.classList.toggle("active");
 });
 
-downloadButton.addEventListener("click", function (event) {
-  event.preventDefault();
-  alert("Download CV button clicked");
-});
+// downloadButton.addEventListener("click", function (event) {
+//   event.preventDefault();
+//   alert("Download CV button clicked");
+// });
+
+// downloadButton.onclick = function () {
+//   alert("Hello World from the download button");
+// };
 
 // ===== Dark Mode =====
 
@@ -189,3 +193,18 @@ workTogetherButton.onclick = function (e) {
 
 const year = document.getElementById("year");
 year.textContent = new Date().getFullYear();
+
+const text = "A Frontend Developer";
+let i = 0;
+const roleEl = document.querySelector(".hero-role");
+
+function type() {
+  if (i < text.length) {
+    document.querySelector(".hero-role").textContent += text.charAt(i);
+    i++;
+    setTimeout(type, 100);
+  }
+}
+
+roleEl.textContent = "";
+type();
